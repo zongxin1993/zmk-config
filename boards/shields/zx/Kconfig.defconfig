@@ -1,0 +1,17 @@
+
+if SHIELD_ZX_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "zx66"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+if SHIELD_ZX_LEFT || SHIELD_ZX_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+endif
