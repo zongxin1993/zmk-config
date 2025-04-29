@@ -25,13 +25,3 @@ include:
     shield: splitkb_zx_right
   - board: nrfmicro_13
     shield: settings_reset
-  - board: seeeduino_xiao_ble
-    shield: splitkb_zx_left
-  - board: seeeduino_xiao_ble
-    shield: splitkb_zx_right
-  - board: seeeduino_xiao_ble
-    shield: settings_reset
-  - board: nrfmicro_13
-    shield: splitkb_aurora_lily58_left
-  - board: nrfmicro_13
-    shield: splitkb_aurora_lily58_right
