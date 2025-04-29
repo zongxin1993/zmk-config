@@ -2,7 +2,7 @@
 if SHIELD_ZX_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "zx66"
+    default "zx"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
