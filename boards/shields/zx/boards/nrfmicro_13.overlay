@@ -1,0 +1,41 @@
+#include <dt-bindings/led/led.h>
+
+// / {
+//     leds {
+//         compatible = "gpio-leds";
+//         blue_led: led_0 {
+//             gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+//         };
+//     };
+
+//     // Node name must match original "EXT_POWER" label to preserve user settings.
+//     EXT_POWER {
+//         compatible = "zmk,ext-power-generic";
+//         control-gpios = <&gpio0 3 GPIO_ACTIVE_LOW>;
+//         init-delay-ms = <50>;
+//     };
+
+//     vbatt:vbatt {
+//         compatible = "zmk,battery-voltage-divider";
+//         io-channels = <&adc 4>;
+//         output-ohms = <2000000>;
+//         full-ohms = <(2000000 + 820000)>;
+//     };
+// };
+
+
+&led_0 {
+    gpios = <&gpio1 11 GPIO_ACTIVE_HIGH>;
+};
+
+&vbatt_0 {
+    io-channels = <&adc 4>;
+    output-ohms = <2000000>;
+    full-ohms = <(2000000 + 820000)>;
+};
+
+/ {
+    chosen {
+        zmk,battery = &vbatt_0;
+    };
+};
